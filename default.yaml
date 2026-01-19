@@ -201,6 +201,10 @@ key_binder:
     # Left/Right for paging (stacked candidate list default in Squirrel)
     - { when: has_menu, accept: Left, send: Page_Up }
     - { when: has_menu, accept: Right, send: Page_Down }
+    
+    # Up/Down for selecting candidates in vertical layout
+    - { when: has_menu, accept: Up, send: Up }
+    - { when: has_menu, accept: Down, send: Down }
 
     # 翻页 , .
     # - { when: has_menu, accept: comma, send: Page_Up }
