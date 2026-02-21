@@ -130,6 +130,7 @@ Linux 依赖问题的具体解释请参考 [#840](https://github.com/iDvel/rime-
 - [Git 安装](#git-安装)
 - [东风破 plum](#东风破-plum)
 - [自动部署脚本](#自动部署脚本)
+- [同文输入法](#同文输入法-trime)
 - [仓输入法](#仓输入法-hamster)
 - [Arch Linux](#arch-linux)（AUR）
 
@@ -248,6 +249,12 @@ bash rime-install iDvel/rime-ice:others/recipes/config:schema=ziguang
 ```sh
 bash rime-install iDvel/rime-ice@2024.05.21:others/recipes/full
 ```
+
+### 同文输入法 [Trime](https://github.com/osfans/trime)
+
+安卓端建议使用补丁方式单独覆盖移动端配置：将 `others/Trime/default.custom.yaml` 复制到同文用户目录（与 `default.yaml` 同级）后重新部署。
+
+该补丁主要调整：候选数量、方案选单折叠策略、中英切换行为，以及移除桌面端常用的翻页按键映射，避免软键盘冲突。
 
 ### 仓输入法 [Hamster](https://github.com/imfuxiao/Hamster)
 

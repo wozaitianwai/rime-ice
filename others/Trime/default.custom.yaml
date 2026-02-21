@@ -1,0 +1,29 @@
+# Trime（同文输入法）移动端建议配置
+# 将本文件放到同文用户目录（与 default.yaml 同级）后重新部署。
+#
+# 说明：
+# - 仅覆写与手机操作强相关的配置，词库与方案主体仍使用雾凇拼音默认配置。
+# - 如你主要使用九宫格，可把 schema_list 里 t9 放到第一位。
+
+patch:
+  menu/page_size: 6
+
+  # 手机端通常不使用物理键盘，保留简洁的方案切换热键
+  switcher/hotkeys:
+    - Control+grave
+
+  # 避免与软键盘符号键冲突：关闭默认的 -/=、方向键翻页
+  key_binder/bindings:
+    - { when: composing, accept: Tab, send: Shift+Right }
+    - { when: composing, accept: Shift+Tab, send: Shift+Left }
+
+  # 手机更常用左 Shift 暂时切英文，右 Shift 基本不可用
+  ascii_composer/switch_key:
+    Caps_Lock: clear
+    Shift_L: inline_ascii
+    Shift_R: noop
+    Control_L: noop
+    Control_R: noop
+
+  # 候选较少时不折叠选项，减少点击层级
+  switcher/fold_options: false
