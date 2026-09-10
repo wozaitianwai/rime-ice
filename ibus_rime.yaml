@@ -1,0 +1,17 @@
+# Ubuntu / IBus-Rime frontend settings
+# Migrated from the personalized Squirrel configuration.
+
+config_version: '1.0'
+
+style:
+  # Candidate list arranged vertically, matching the macOS layout.
+  horizontal: false
+
+  # Keep the preedit text inline while composing.
+  inline_preedit: true
+
+  # Show the converted preview in the input field.
+  preedit_style: preview
+
+  # Keep the cursor at the selected text.
+  cursor_type: select
